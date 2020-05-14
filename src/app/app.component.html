@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <img src="/assets/Screenshot 2020-05-14 at 1.23.54 PM.png" style="    width: 35px;">
+        <ion-list id="inbox-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+
+            <ion-item (click)="selectedIndex = i" routerDirection="root" lines="none" detail="false" [class.selected]="selectedIndex == i" (click)="link(p)">
+
+                              
+              <!-- <ion-icon slot="start" name="{{p.icon}}"></ion-icon> -->
+              <ion-label style="font-size: 19px;">{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <div style="margin-top: 254px;    margin-left: 23px; color:white">
+          <p style="color:white">DISTRIBUTION OPPORTUNITIES</p><br>
+          <p style="color: white;
+          margin-top: -15px;
+          font-size: 10px;
+          margin-left: 33px;"> @ 2020 GICCO NEW YORK LLC</p>
+        </div>
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

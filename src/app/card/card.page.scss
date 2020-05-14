@@ -1,0 +1,199 @@
+ion-header{
+  ion-toolbar{
+    --background: var(--main-color) !important;
+    ion-title{
+      position: absolute;
+      left: 50px;
+      right: 50px;
+      top: 10px;
+      margin: auto;
+      text-align: center;
+    }
+    ion-buttons{
+      ion-menu-button, ion-back-button{
+        color: #fff;
+      }
+    }
+  }
+  &:after{
+    display: none;
+  }
+}
+
+ion-content{
+  [sec1]{
+    padding:15px 15px 20px;
+    h2{
+      color: var(--main-color);
+      font-size:27px;
+      font-weight: 700;
+      margin:0;
+      text-transform: uppercase;
+      span{
+        display: block;
+        font-weight: 400;
+      }
+    }
+    span[date]{
+      font-size:15px;
+      margin-bottom:19px;
+      display: block;
+    }
+    [center][btn-theme]{
+        display: block;
+        margin:15px auto 0;
+        max-width: 60%;
+    }
+    h3[secHdng]{
+      font-family: 'Freestyle Script' !important;
+      font-size:48px;
+      margin:0 0 20px;
+      color: var(--main-color);
+      &:after{
+        content: "";
+        width: 70px;
+        height: 5px;
+        background: #fcbe02;
+        display: block;
+        margin: -7px 0 0 12px;
+      }
+    }
+    p{
+      margin-bottom:20px;
+      margin-top:15px;
+      b{
+        display: block;
+      }
+    }
+  }
+  [dynamic]{
+    width: 100%;
+    float:left;
+    margin:0px 0 20px;
+    img{
+      width: 100%;
+      float:left;
+      height:400px;
+      object-fit:cover;
+    }
+  }
+}
+
+.box-feilds {
+  color:var(--main-color);
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  padding-left: 40px !important;
+  border-bottom: 1px solid var(--main-color) !important;;
+  margin-bottom: 15px;
+  ion-input  {
+      font-weight: 600;
+      margin-right: 34px;
+      padding-right: 70px;;
+      --margin-right: 34px;
+      font-family: Montserrat, sans-serif !important;
+      font-size: 14px;
+      padding-bottom: 7px !important;
+      --placeholder-color:var(--main-color);
+      --placeholder-opacity:1;
+      text-align: center;
+      margin-right: 35px;
+      [input]{
+        margin-right: 34px;
+        --margin-right: 34px;
+      }
+      .native-input {
+        margin-right: 34px;
+        --margin-right: 34px;
+      }
+
+  }
+
+  ion-select {
+    font-family: Montserrat, sans-serif !important;
+    font-size: 14px;
+    padding-bottom: 7px !important;
+    --placeholder-color:var(--main-color);
+    --placeholder-opacity:1;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 600;
+    .select-text{
+      font-weight: 600;
+      text-align: center;
+    }
+
+  }
+
+  ion-select-option {
+    text-align: center;
+    font-family: Montserrat, sans-serif !important;
+    font-size: 14px;
+  }
+
+  ion-datetime {
+     --margin-bottom: 8px;
+     margin-bottom: 8px;
+      font-family: Montserrat, sans-serif !important;
+      font-size: 14px;
+      padding-bottom: 7px !important;
+      --placeholder-color:var(--main-color);
+      --placeholder-opacity:1;
+      font-weight: 600;
+   
+      .datetime-text{
+          margin-right: 10px;
+          font-weight: 600;
+      }
+
+     
+  }
+  img.icon-log {
+      width: 20px;
+      position: absolute;
+      top: 7px;
+      left:0;
+  }
+}
+
+[btcss]{
+
+  display: block;
+  margin:15px auto 0;
+  max-width: 80%;
+  
+  border-radius: 2px;
+  text-transform: uppercase;
+  --background: white;
+  --box-shadow: none;
+  color:  var(--main-color);
+  font-size: 14px;
+  font-weight: 400;
+  --padding-start:40px;
+  --padding-end:40px;
+  border: 1px solid var(--main-color);
+  --background-activated:transparent;
+  font-weight: 600;
+  }
+
+.valid{
+color:red;
+font-size: 12px;
+text-align: center;
+}
+
+.validd{
+margin-top: 40px;
+margin-top: 59px;
+color:red;
+font-size: 12px;
+text-align: center;
+margin-left: 50px;
+}
+
+.myclass input{
+
+margin-right: 30px;
+}
+  
+

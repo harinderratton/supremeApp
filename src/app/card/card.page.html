@@ -1,0 +1,184 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><img class="logo-img" src="/assets/logo.png" width="120" alt=""></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <div sec1>
+    <form novalidate  [formGroup]="myform" (ngSubmit)="stripepay()"> 
+    <h3 secHdng>Información Personal</h3>
+    <ion-row>
+     
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-select placeholder="TIPO DE DONACIÓN" formControlName="mode" class="myclasss">
+            <ion-select-option value="o">OFRENDA</ion-select-option>
+            <ion-select-option value="d">DIEZMO</ion-select-option>
+          </ion-select>
+        
+        </div>
+        <div *ngIf="!myform.controls.mode.valid && is_submit" class="valid">
+          IPO DE DONACIÓN IS REQUIRED
+        </div>
+      </ion-col>
+
+
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="NOMBRE COMPLETO" type="text" formControlName="fname" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.fname.valid && is_submit" class="valid">
+          NOMBRE COMPLETO IS REQUIRED
+        </div>
+      </ion-col>
+
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="EMAIL" type="email" formControlName="email" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.email.valid && is_submit" class="valid">
+          EMAIL IS REQUIRED
+        </div>
+      </ion-col>
+
+
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="DIRECCION" type="text" formControlName="address" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.address.valid && is_submit" class="valid">
+          DIRECCION IS REQUIRED
+        </div>
+      </ion-col>
+
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="CIUDAD" type="text" formControlName="city" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.city.valid && is_submit" class="valid">
+          CIUDAD IS REQUIRED
+        </div>
+      </ion-col>
+
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="ESTADO" type="text" formControlName="state" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.state.valid && is_submit" class="valid">
+          ESTADO IS REQUIRED
+        </div>
+      </ion-col>
+
+
+
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="CODIGO POSTAL" type="text" formControlName="zcode" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.zcode.valid && is_submit" class="valid">
+          CODIGO POSTAL IS REQUIRED
+        </div>
+      </ion-col>
+
+
+
+
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="CANTIDAD" type="number" formControlName="amount" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.amount.valid && is_submit" class="valid">
+          CANTIDAD IS REQUIRED
+        </div>
+      </ion-col>
+
+
+
+
+     
+      <ion-col size="12">
+
+        <div class="box-feilds">
+          <ion-input placeholder="NUMERO DE TARJETA" type="number" formControlName="cardno" class="myclass"></ion-input>
+        
+        </div>
+        <div *ngIf="!myform.controls.cardno.valid && is_submit" class="valid">
+          NUMERO DE TARJETA IS REQUIRED
+        </div>
+      </ion-col>
+
+      
+      <ion-col size="12">
+        <ion-row>
+          <ion-col size="6">
+            <div class="box-feilds" style="    margin-top: 9px;margin-right: -41px;">
+              <ion-datetime  placeholder="FECHA DE EXPIRACION" displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" formControlName="expdate" style="margin-left:-13px"></ion-datetime>      
+           
+          </div>
+          <div *ngIf="!myform.controls.expdate.valid && is_submit" class="valid" >
+            FECHA DE EXPIRACION IS REQUIRED
+          </div>
+
+          </ion-col>
+
+          <ion-col size="6">
+            <div class="box-feilds" style="    position: absolute;
+               margin-top: -4px;
+            margin-left: 68px;
+           
+           
+        ">
+              <ion-input type="password" placeholder="CVV" formControlName="cvv" class="myclass"></ion-input>
+            
+            </div>
+            <div *ngIf="!myform.controls.cvv.valid && is_submit" class="validd">
+              CVV IS REQUIRED
+            </div>
+            
+          </ion-col>
+
+
+
+        </ion-row>
+  
+      </ion-col>
+      
+      <!-- <ion-col size="12">
+     
+  
+      </ion-col> -->
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-button type="submit" center btcss class="test">Donar ahora</ion-button>
+        <ion-button center btcss [routerLink]="['/stripe']" class="test"><ion-icon name="arrow-back-circle-outline"></ion-icon> Regresar</ion-button>
+      </ion-col>
+    </ion-row>
+    </form>
+  </div>
+</ion-content>
+
+

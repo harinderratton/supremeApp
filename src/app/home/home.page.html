@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><img class="logo-img" src="/assets/logo.png" width="120" alt=""></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div sec1  *ngIf="video?.length>0">
+   
+
+    <div (click)="link(video[0]?.video)" >
+
+      <iframe  [src]="photoURL(video[0]?.video)"  width="100%" height="200" frameborder="0"  allowfullscreen="allowfullscreen" scrolling="yes" style="   pointer-events: none;
+      ">  </iframe> 
+
+    </div>
+    <h2>Home, Office & Commercial Delivery</h2>
+
+    <ion-grid>
+   
+    
+      <ion-row>
+        <ion-col size="6">
+          <img src="/assets/Screenshot 2020-05-14 at 8.58.57 AM.png" alt="" [routerLink]="['/bottle']" routerLinkActive="router-link-active" > 
+        </ion-col>
+        <ion-col size="6">
+          <img src="/assets/Screenshot 2020-05-14 at 8.59.02 AM.png" alt="" [routerLink]="['/tank']" routerLinkActive="router-link-active" >
+        </ion-col>
+        
+      </ion-row>
+
+      </ion-grid>
+
+
+  
+  
+  </div>
+
+  <div sec3>
+    <img src="/assets/img3.png" alt="">
+  </div>
+</ion-content>
